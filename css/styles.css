@@ -87,6 +87,15 @@ body {
   margin-right: 5px;
 }
 
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+
+.navbar-header button.navbar-toggle{
+  clear: both;
+  margin-top: -30px;
+}
+
 /* END HEADER */
 
 /* FOOTER */
@@ -95,21 +104,87 @@ body {
 
 /* Homepage */
 
+.container .jumbotron {
+  box-shadow:  0 0 50px #3F0C1F;
+  border: 2px solid #3F0C1F;
+}
+
+#menu-tile, #specials-tile, #map-tile{
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover{
+  box-shadow: 0 1px 5px 1px #cccc;
+}
+
+#menu-tile{
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+
+#specials-tile{
+  background: url('../images/specials-tile.jpg') no-repeat;
+  background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
 /* END HOMPAGE */
 
 /******** Large devices only ********/
 @media (min-width: 1200px){
-
+  .container .jumbotron {
+    background: url('../images/jumbotron_1200.jpg') no-repeat;
+    height: 675px;
+  }
 }
 
 /******** Medium devices only ********/
 @media (min-width: 992px) and (max-width: 1199px) {
+  /* HEADER */
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  /* END HEADER */
 
+  /* HOME PAGE */
+  
+  .container .jumbotron {
+    background: url('../images/jumbotron_992.jpg') no-repeat;
+    height: 558px;
+  }
+
+  /* END HOMEPAGE */
 }
 
 /******** Small devices only ********/
 @media (min-width: 768px) and (max-width: 991px) {
+  /* HOME PAGE */
+  
+  .container .jumbotron {
+    background: url('../images/jumbotron_768.jpg') no-repeat;
+    height: 432px;
+  }
 
+  /* END HOMEPAGE */
 }
 
 /******** Extra small devices only ********/
@@ -134,5 +209,60 @@ body {
     height: 20px;
   }
 
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
+
+  #collapsable-nav a span{
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
+
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
    /* END HEADER */
+
+   /* HOMEPAGE */
+
+   .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  #menu-tile, #specials-tile {
+    width: 360px;
+    margin: 0 auto 15px;
+  }
+
+  /* END HOMEPAGE */
+}
+
+
+/********** SUPER SMALL DEVICES **********/
+@media (max-width: 479px){
+  .navbar-brand h1 {
+    padding-top: 5px;
+    font-size: 6vw;
+  }
+
+  #menu-tile, #specials-tile{
+    width: 280px;
+    margin: 0 auto 15px;
+  }
+
 }
