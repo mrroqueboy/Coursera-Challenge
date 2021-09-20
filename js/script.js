@@ -56,7 +56,8 @@ $(function () {
       // remove 'acitve' from home button
       var classes = document.querySelector("#navHomeButton").className;
       classes = classes.replace(new RegExp("active", "g"), "");
-
+      document.querySelector("#navHomeButton").className = classes;
+      
       // add 'active' to menu button if not already there
       classes = document.querySelector("#navMenuButton").className;
       if(classes.indexOf("active") == -1) {
@@ -107,6 +108,9 @@ $(function () {
         $ajaxUtils.sendGetRequest(
           categoryHtml,
           function (categoryHtml) {
+
+            switchMenuToActive();
+
             var categoriesViewHTML = buildCategoriesViewHTML(
               categories,
               categoriesTitleHtml,
@@ -156,6 +160,7 @@ $(function () {
         $ajaxUtils.sendGetRequest(
           menuItemHtml,
           function (menuItemHtml) {
+            switchMenuToActive();
             var menuItemsViewHtml = buildMenuItemsViewHtml(
               categoryMenuItems,
               menuItemsTitleHtml,
